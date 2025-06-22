@@ -39,4 +39,11 @@ class NewUser {
   }
 }
 
+class Subuser extends NewUser{
+  isFamily: boolean = true;
+  changeCourseCount(){
+    this._courseCount = 4
+  }
+}
+
 const newpragati= new User("pragati@gmail.com", "pragati");
