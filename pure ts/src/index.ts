@@ -12,6 +12,7 @@ class User {
 const pragati= new User("pragati@gmail.com", "pragati");
 
 class NewUser {
+  protected _courseCounted= 1
   private _courseCount = 1
   readonly city:string = "Jaipur"
   constructor(
@@ -42,7 +43,7 @@ class NewUser {
 class Subuser extends NewUser{
   isFamily: boolean = true;
   changeCourseCount(){
-    this._courseCount = 4
+    this._courseCounted = 4
   }
 }
 

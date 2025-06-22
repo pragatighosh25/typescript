@@ -12,6 +12,7 @@ class NewUser {
     constructor(email, name) {
         this.email = email;
         this.name = name;
+        this._courseCounted = 1;
         this._courseCount = 1;
         this.city = "Jaipur";
     }
@@ -37,7 +38,7 @@ class Subuser extends NewUser {
         this.isFamily = true;
     }
     changeCourseCount() {
-        this._courseCount = 4;
+        this._courseCounted = 4;
     }
 }
 const newpragati = new User("pragati@gmail.com", "pragati");
