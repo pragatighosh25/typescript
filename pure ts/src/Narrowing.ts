@@ -87,3 +87,24 @@ function getTrueShape(shape: Shape){
 
   return shape.side * shape.side
 }
+
+// exhaustive checking using never
+
+type newShape = Circle | Square | Rectangle
+
+function getArea(shape: newShape){
+  switch(shape.kind){
+    case "circle":
+      return Math.PI * shape.radius ** 2
+
+    case "Square":
+      return shape.side * shape.side
+
+    case "Rectangle":
+      return shape.width * shape.length
+
+    default: 
+      const _defaultforshape: never= shape
+      return _defaultforshape
+  }
+}
