@@ -13,3 +13,13 @@ function identityFour(val) {
 }
 const bottle = { type: 1, name: "pragati" };
 identityFour(bottle);
+//generic used in arrays and arrow functions
+function login(val) {
+    return val[3];
+}
+function getMoreProducts(products) {
+    return products[4];
+}
+const getProducts = (val) => {
+    return val[5];
+};

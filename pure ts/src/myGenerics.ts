@@ -20,3 +20,17 @@ interface Bottle{
 }
 const bottle: Bottle={type: 1, name: "pragati"};
 identityFour<Bottle>(bottle)
+
+//generic used in arrays and arrow functions
+
+function login<Type> (val: Array<Type>): Type {
+  return val[3];
+}
+
+function getMoreProducts <T> (products: T[]): T{
+  return products[4];
+}
+
+const getProducts = <T>(val: T[]): T =>{
+  return val[5];
+}
