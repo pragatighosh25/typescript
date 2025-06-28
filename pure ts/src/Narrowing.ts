@@ -59,3 +59,31 @@ function logVal(x: Date| string){
     console.log(x.toUpperCase());
   }
 }
+
+//discrimated union
+
+interface Circle{
+  kind: "circle",
+  radius: number
+}
+
+interface Square{
+  kind: "Square",
+  side: number
+}
+
+interface Rectangle{
+  kind: "Rectangle",
+  length: number,
+  width: number
+}
+
+type Shape = Circle | Square
+
+function getTrueShape(shape: Shape){
+  if(shape.kind === "circle"){
+    return Math.PI * shape.radius ** 2
+  }
+
+  return shape.side * shape.side
+}
