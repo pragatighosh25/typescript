@@ -28,3 +28,24 @@ function printAll(val: string| string[]| null){
     }
   }
 }
+
+//in usecase
+
+interface User{
+  name: string,
+  email: string
+}
+
+interface Admin{
+  name: string,
+  email: string,
+  isAdmin: boolean
+}
+
+function isAdminAccount(account: User| Admin){
+  if("isAdmin" in account){
+    //seeing if isAdmin property is present in account, if it is present it means account is of admin type
+    return account.isAdmin;
+  }
+  return false
+}
