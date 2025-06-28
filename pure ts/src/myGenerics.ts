@@ -34,3 +34,13 @@ function getMoreProducts <T> (products: T[]): T{
 const getProducts = <T>(val: T[]): T =>{
   return val[5];
 }
+
+//class types in generics
+
+class Sellable <T> {
+  public cart: T[]= []
+
+  addToCart(product : T) {
+    this.cart.push(product)
+  }
+}
